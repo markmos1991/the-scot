@@ -4,7 +4,7 @@ import React from 'react';
 const Menu = ({ menuItems }) => {
   return (
     <div className="text-center text-red-600 pt-4">
-      <h2 className="text-2xl font-bold">13/14"</h2>
+      <h2 className="text-2xl font-bold">13/14&rdquo;</h2>
       <ul className="">
         {menuItems.map((item, index) => (
           <li key={index} className="p-2">
