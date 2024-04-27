@@ -1,7 +1,17 @@
 import React from 'react';
 
+interface MenuItem {
+  itemName: string;
+  description: string;
+  price: number;
+}
+
+interface MenuProps {
+  menuItems: MenuItem[];
+}
+
 // Menu component
-const Menu = ({ menuItems }) => {
+const Menu: React.FC<MenuProps> = ({ menuItems }) => {
   return (
     <div className="text-center text-red-600 pt-4">
       <h2 className="text-2xl font-bold">13/14&rdquo;</h2>
@@ -19,9 +29,9 @@ const Menu = ({ menuItems }) => {
 };
 
 // Example usage
-const ExampleMenu = () => {
+const ExampleMenu: React.FC = () => {
   // Define menu items as an array of objects
-  const menuItems = [
+  const menuItems: MenuItem[] = [
     {
       itemName: 'GBC (V)',
       description: 'Garlic butter, mozzarella blend, parmigiano reggiano',
